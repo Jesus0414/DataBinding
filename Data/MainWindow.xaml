@@ -1,0 +1,26 @@
+﻿<Window x:Class="Data.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Data"
+        mc:Ignorable="d" Name="wndPrincipal"
+        Title="MainWindow" Height="310.5" Width="362" Visibility="Visible">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="#FFFFFF7B" Offset="1"/>
+            <GradientStop Color="WhiteSmoke" Offset="0.65"/>
+            <GradientStop Color="#FFFFCC74"/>
+            <GradientStop Color="WhiteSmoke" Offset="0.35"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <TextBox x:Name="txtEjemplo" Text="Prueba de texto" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="37,46,0,0" Background="#FFF8D8FF"/>
+        <TextBlock Text="{Binding Path=Text, ElementName=txtEjemplo}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="37,82,0,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Ancho:" VerticalAlignment="Top" Margin="37,112,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Path=Width, ElementName=wndPrincipal}" VerticalAlignment="Top" Width="120" Margin="78,112,0,0" Background="#FFFDCCCC"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Alto:" VerticalAlignment="Top" Margin="37,145,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding Path=Height, ElementName=wndPrincipal}" VerticalAlignment="Top" Width="120" Margin="78,145,0,0" Background="#FFFFE7D3"/>
+
+    </Grid>
+</Window>
